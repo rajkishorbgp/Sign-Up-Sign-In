@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "616901808760",
+    "project_id": "sign-up-sign-in-89166",
+    "storage_bucket": "sign-up-sign-in-89166.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:616901808760:android:f95e80f2baddc02511138d",
+        "android_client_info": {
+          "package_name": "com.rajkishorbgp.sign_up_sign_in"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "616901808760-39dnglroeh11hftdpr13ocp8jm5tpkdk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBF86WlL67e0o_aBoK0NQQvwvoYhozET9g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "616901808760-39dnglroeh11hftdpr13ocp8jm5tpkdk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

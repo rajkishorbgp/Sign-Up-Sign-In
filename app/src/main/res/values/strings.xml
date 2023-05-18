@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Sign-Up-Sign-In</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_an_user_login">Already an user? Login</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="not_yet_registered_signup">Not yet registered? Signup</string>
 </resources>

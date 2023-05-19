@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
-import com.rajkishorbgp.sign_up_sign_in.databinding.ActivitySignInBinding
 import com.rajkishorbgp.sign_up_sign_in.databinding.ActivitySignUpBinding
 
 class SignUpActivity : AppCompatActivity() {
@@ -31,6 +30,7 @@ class SignUpActivity : AppCompatActivity() {
                             if (it.isSuccessful) {
                                 val intent = Intent(this, SignInActivity::class.java)
                                 startActivity(intent)
+                                finish()
                             } else {
                                 Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT)
                                     .show()
@@ -47,6 +47,7 @@ class SignUpActivity : AppCompatActivity() {
         binding.loginRedirectText.setOnClickListener{
             val loginIntent = Intent(this,SignInActivity::class.java)
             startActivity(loginIntent)
+            finish()
         }
 
     }

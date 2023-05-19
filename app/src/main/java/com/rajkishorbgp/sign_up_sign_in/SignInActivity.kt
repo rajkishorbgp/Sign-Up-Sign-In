@@ -37,23 +37,17 @@ class SignInActivity : AppCompatActivity() {
         }
 
         binding.forgotPassword.setOnClickListener{
-            val email=binding.loginEmail.text.toString();
-            if (email.isNotEmpty()) {
-                firebaseAuth.sendPasswordResetEmail(email).addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                        Toast.makeText(this, "Send Email", Toast.LENGTH_LONG).show()
-                    } else {
-                        Toast.makeText(this, task.exception.toString(), Toast.LENGTH_SHORT).show()
-                    }
-                }
-            }else{
-                Toast.makeText(this,"Enter the Email",Toast.LENGTH_SHORT).show()
-            }
+            startActivity(Intent(this,ForgotActivity::class.java))
         }
 
         binding.signupRedirectText.setOnClickListener{
             val  signUpIntent = Intent(this,SignUpActivity::class.java)
             startActivity(signUpIntent)
+            finish()
+        }
+        if (firebaseAuth.currentUser!=null){
+            startActivity(Intent(this,MainActivity::class.java))
+            finish()
         }
     }
 }

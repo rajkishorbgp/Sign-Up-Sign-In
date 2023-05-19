@@ -8,4 +8,11 @@
     <string name="login">Login</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="not_yet_registered_signup">Not yet registered? Signup</string>
+    <string name="reset_password">reset password</string>
+    <string name="log_out">Log out</string>
+    <string name="save">Save</string>
+    <string name="bio">bio</string>
+    <string name="last_name">Last name</string>
+    <string name="first_name">First name</string>
+    <string name="todo">TODO</string>
 </resources>

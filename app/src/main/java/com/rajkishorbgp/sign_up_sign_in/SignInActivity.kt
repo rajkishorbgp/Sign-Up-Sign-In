@@ -3,13 +3,9 @@ package com.rajkishorbgp.sign_up_sign_in
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
 import com.rajkishorbgp.sign_up_sign_in.databinding.ActivitySignInBinding
-import com.rajkishorbgp.sign_up_sign_in.databinding.ActivitySignUpBinding
-import java.time.Instant
 
 class SignInActivity : AppCompatActivity() {
 
@@ -40,6 +36,20 @@ class SignInActivity : AppCompatActivity() {
             }
         }
 
+        binding.forgotPassword.setOnClickListener{
+            val email=binding.loginEmail.text.toString();
+            if (email.isNotEmpty()) {
+                firebaseAuth.sendPasswordResetEmail(email).addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        Toast.makeText(this, "Send Email", Toast.LENGTH_LONG).show()
+                    } else {
+                        Toast.makeText(this, task.exception.toString(), Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }else{
+                Toast.makeText(this,"Enter the Email",Toast.LENGTH_SHORT).show()
+            }
+        }
 
         binding.signupRedirectText.setOnClickListener{
             val  signUpIntent = Intent(this,SignUpActivity::class.java)

@@ -1,9 +1,9 @@
 package com.rajkishorbgp.sign_up_sign_in
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.rajkishorbgp.sign_up_sign_in.databinding.ActivitySignInBinding
 
@@ -27,6 +27,7 @@ class SignInActivity : AppCompatActivity() {
                     if (it.isSuccessful){
                         val intent = Intent(this,MainActivity::class.java)
                         startActivity(intent)
+                        finish()
                     }else{
                         Toast.makeText(this,it.exception.toString(),Toast.LENGTH_SHORT).show()
                     }
@@ -45,9 +46,17 @@ class SignInActivity : AppCompatActivity() {
             startActivity(signUpIntent)
             finish()
         }
-        if (firebaseAuth.currentUser!=null){
-            startActivity(Intent(this,MainActivity::class.java))
-            finish()
+
+
+
+    }
+    override fun onStart() {
+        super.onStart()
+        if (intent.getStringExtra("key")==null) {
+            if (firebaseAuth.currentUser != null) {
+                startActivity(Intent(this, MainActivity::class.java))
+                finish()
+            }
         }
     }
 }

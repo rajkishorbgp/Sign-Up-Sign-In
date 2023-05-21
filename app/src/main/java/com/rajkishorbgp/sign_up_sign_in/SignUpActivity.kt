@@ -29,6 +29,7 @@ class SignUpActivity : AppCompatActivity() {
                         .addOnCompleteListener {
                             if (it.isSuccessful) {
                                 val intent = Intent(this, SignInActivity::class.java)
+                                intent.putExtra("key","raj");
                                 startActivity(intent)
                                 finish()
                             } else {

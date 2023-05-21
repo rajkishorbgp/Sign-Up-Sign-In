@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
             firebaseAuth.signOut()
             startActivity(Intent(this,SignInActivity::class.java))
             Toast.makeText(this,"Log out!",Toast.LENGTH_SHORT).show()
+            finish()
         }
     }
 }

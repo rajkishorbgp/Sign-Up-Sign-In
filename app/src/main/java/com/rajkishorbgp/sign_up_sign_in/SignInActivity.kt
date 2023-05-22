@@ -46,9 +46,7 @@ class SignInActivity : AppCompatActivity() {
             startActivity(signUpIntent)
             finish()
         }
-
-
-
+        
     }
     override fun onStart() {
         super.onStart()

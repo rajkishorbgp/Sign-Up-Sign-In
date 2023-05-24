@@ -1,3 +1,7 @@
 package com.rajkishorbgp.sign_up_sign_in
 
-data class UserData(val firstName:String ?=null, val lastName:String ?=null, val bio:String ?=null)
+import android.provider.ContactsContract.CommonDataKinds.Email
+
+data class User(val firstName : String? = null,val lastName : String? = null,
+                val age : String? = null,val userName : String? = null, val email: String? =null){
+}

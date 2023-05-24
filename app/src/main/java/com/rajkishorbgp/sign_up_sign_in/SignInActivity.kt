@@ -25,7 +25,8 @@ class SignInActivity : AppCompatActivity() {
             if (email.isNotEmpty() && password.isNotEmpty()){
                 firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener{
                     if (it.isSuccessful){
-                        val intent = Intent(this,MainActivity::class.java)
+                        val intent = Intent(this,UserProfileActivity::class.java)
+                        intent.putExtra("EMAIL",email)
                         startActivity(intent)
                         finish()
                     }else{
@@ -52,7 +53,7 @@ class SignInActivity : AppCompatActivity() {
         super.onStart()
         if (intent.getStringExtra("key")==null) {
             if (firebaseAuth.currentUser != null) {
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, UserProfileActivity::class.java))
                 finish()
             }
         }

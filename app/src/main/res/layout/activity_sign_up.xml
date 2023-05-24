@@ -27,6 +27,7 @@
                 android:layout_marginTop="30dp"
                 android:padding="8dp"
                 android:hint="@string/email"
+                android:inputType="textEmailAddress"
                 android:textColorHint="@color/black"
                 android:textSize="20sp"
                 android:drawablePadding="8dp"

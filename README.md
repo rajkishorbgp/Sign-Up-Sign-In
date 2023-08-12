@@ -48,7 +48,7 @@ The project file structure is organized as follows:
 ├── app
 │   ├── src
 │   │   ├── main
-│   │   │   ├── java/com/example/signupsignin
+│   │   │   ├── java/com/rajkishorbgp/signupsignin
 │   │   │   │   ├── activities
 │   │   │   │   │   ├── SignUpActivity.kt
 │   │   │   │   │   ├── SignInActivity.kt
